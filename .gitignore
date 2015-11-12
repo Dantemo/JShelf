@@ -1,7 +1,15 @@
+# IDE Ignore List
 .idea
-.sass-cache
+*.iml
+
+# NPM & Bower Ignore List
 node_modules
-build
-release
-tmp
 bower_components
+
+
+
+# Output File
+build
+tmp
+release
+
