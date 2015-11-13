@@ -1,12 +1,19 @@
 'use strict';
 
 var gulp = require('gulp');
-var connect = require('connect');
-var staticServer = connect();
+
+var nodeStatic = require('node-static');
 
 module.exports = gulp.task('serve', function (next) {
   var staticServerPath = BUILD_FOLDER;
   if (release)
     staticServerPath = RELEASE_FOLDER;
-  staticServer.use(connect.static(staticServerPath)).listen(process.env.PORT || config.ports.staticServer, next);
+
+  var file = new nodeStatic.Server(staticServerPath);
+
+  require('http').createServer(function (request, response) {
+    request.addListener('end', function () {
+          file.serve(request, response);
+      }).resume();
+  }).listen(process.env.PORT || config.ports.staticServer);
 });
