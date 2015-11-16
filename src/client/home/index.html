@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="snackbar">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,8 @@
     <!--styles-->
   </head>
   <body>
-    <h1>Welcome to Snacks Bar!</h1>
+    <header ng-include="'home/views/home.header.html'"></header>
+    <h1>Welcome to Snackbar</h1>
     <div ui-view></div>
     <!--scripts-->
   </body>

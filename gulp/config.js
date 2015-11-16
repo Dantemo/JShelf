@@ -25,7 +25,11 @@ module.exports = {
       ],
       images: config.folder.src + '/client/*/assets/images/*',
       scripts: config.folder.src + '/client/**/*.js',
-      styles: config.folder.src + '/client/*/styles/*.css',
+      styles: [
+        'node_modules/bootstrap/dist/css/bootstrap.css',
+        'node_modules/bootstrap/dist/css/bootstrap-theme.css',
+        config.folder.src + '/client/*/styles/*.css'
+      ],
       stylesGlob: config.folder.src + '/client/*/styles/*.css',
       templates: config.folder.src + '/client/*/*.html',
       templatesHTML: config.folder.src + '/client/**/*.html',

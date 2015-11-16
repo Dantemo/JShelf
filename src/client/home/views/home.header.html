@@ -1,0 +1,46 @@
+<div class="container" ng-controller="HeaderController">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" ng-click="isCollapsed = !isCollapsed">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand visible-xs" href="#">Snacks Bar</a>
+  </div>
+  <nav class="hidden-xs">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="#" class="navbar-brand">Snacks Bar</a>
+      </li>
+      <li class="dropdown" uib-dropdown>
+        <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+          Management <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Add</a></li>
+        </ul>
+      </li>
+      <li class="dropdown" uib-dropdown>
+        <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+          Records <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Purchase Record</a></li>
+          <li><a href="#">Selling Record</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown-menu-right">
+        <a role="button" >Login</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="visible-xs" uib-collapse="!isCollapsed">
+    <ul class="nav navbar-nav">
+      <li><a href="#" ng-click="isCollapsed = !isCollapsed">Management</a></li>
+      <li><a href="#" ng-click="isCollapsed = !isCollapsed">Selling Record</a></li>
+    </ul>
+  </nav>
+</div>
