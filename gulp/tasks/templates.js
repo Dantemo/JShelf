@@ -5,7 +5,7 @@ var gulpif = require('gulp-if');
 var templateCache = require('gulp-angular-templatecache');
 var header = require('gulp-header');
 var minifyHTML = require('gulp-minify-html');
-
+var config = require('../config');
 
 module.exports = gulp.task('templates', function () {
   return gulp.src([config.paths.src.templates, config.paths.src.templatesHTML])

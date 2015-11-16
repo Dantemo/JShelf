@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
+var config = require('../config');
 
 module.exports = gulp.task('assets', function () {
   return gulp.src(config.paths.src.assets)

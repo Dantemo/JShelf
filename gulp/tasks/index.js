@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var replace = require('gulp-replace');
 var minifyHTML = require('gulp-minify-html');
+var config = require('../config');
 
 module.exports = gulp.task('index', function () {
   return gulp.src(config.paths.src.index)

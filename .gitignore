@@ -1,15 +1,9 @@
-# IDE Ignore List
+# IDE
 .idea
 *.iml
 
-# NPM & Bower Ignore List
+# Node And Bower
 node_modules
-bower_components
 
-
-
-# Output File
-build
-tmp
-release
-
+# Output
+dist

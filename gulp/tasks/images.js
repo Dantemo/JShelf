@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var imagemin = require('gulp-imagemin');
+var config = require("../config");
 
 module.exports = gulp.task('images', function () {
   return gulp.src(config.paths.src.images)

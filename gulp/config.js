@@ -1,39 +1,54 @@
-global.SRC_FOLDER = 'src';
-global.BUILD_FOLDER = 'build';
-global.RELEASE_FOLDER = 'release';
-global.TMP_FOLDER = 'tmp';
+'use strict';
+var config = {
+  folder: {
+    src: 'src',
+    build: 'dist/build',
+    release: 'dist/release',
+    tmp: 'dist/tmp'
+  }
+};
 
-global.config = {
+
+module.exports = {
+  folder: {
+    src: config.folder.src,
+    build: config.folder.build,
+    release: config.folder.release,
+    tmp: config.folder.tmp
+  },
   paths: {
     src: {
-      index: SRC_FOLDER + '/index.html',
-      assets: [SRC_FOLDER + '/assets/**/*', '!' + SRC_FOLDER + '/assets/images/**/*'],
-      images: SRC_FOLDER + '/assets/images/**/*',
-      scripts: SRC_FOLDER + '/client/**/*.js',
-      styles: SRC_FOLDER + '/styles/app.css',
-      stylesGlob: SRC_FOLDER + '/styles/**/*.css',
-      templates: SRC_FOLDER + '/client/**/*.html',
-      templatesHTML: SRC_FOLDER + '/client/**/*.html',
-      templatesCompiled: TMP_FOLDER,
-      livereload: [BUILD_FOLDER + '/**/*', '!' + BUILD_FOLDER + '/assets/**/*'],
-      modules: './' + SRC_FOLDER + '/client/index.js'
+      index: config.folder.src + '/client/home/index.html',
+      assets: [
+        config.folder.src + '/client/*/assets/**/*',
+        '!' + config.folder.src + '/client/*/assets/images/*'
+      ],
+      images: config.folder.src + '/client/*/assets/images/*',
+      scripts: config.folder.src + '/client/**/*.js',
+      styles: config.folder.src + '/client/*/styles/*.css',
+      stylesGlob: config.folder.src + '/client/*/styles/*.css',
+      templates: config.folder.src + '/client/*/*.html',
+      templatesHTML: config.folder.src + '/client/**/*.html',
+      templatesCompiled: config.folder.tmp,
+      livereload: [config.folder.build + '/**/*', '!' + config.folder.build + '/client/*/assets/**/*'],
+      modules: './'+config.folder.src + '/client/index.js'
     },
     dest: {
       build: {
-        styles: BUILD_FOLDER,
-        scripts: BUILD_FOLDER,
-        images: BUILD_FOLDER + '/assets/images',
-        assets: BUILD_FOLDER + '/assets',
-        index: BUILD_FOLDER,
-        server: BUILD_FOLDER
+        styles: config.folder.build,
+        scripts: config.folder.build,
+        images: config.folder.build + '/assets/images',
+        assets: config.folder.build + '/assets',
+        index: config.folder.build,
+        server: config.folder.build
       },
       release: {
-        styles: RELEASE_FOLDER,
-        scripts: RELEASE_FOLDER,
-        images: RELEASE_FOLDER + '/assets/images',
-        assets: RELEASE_FOLDER + '/assets',
-        index: RELEASE_FOLDER,
-        server: RELEASE_FOLDER
+        styles: config.folder.release,
+        scripts: config.folder.release,
+        images: config.folder.release + '/assets/images',
+        assets: config.folder.release + '/assets',
+        index: config.folder.release,
+        server: config.folder.release
       }
     }
   },
@@ -55,8 +70,11 @@ global.config = {
       }
     }
   },
+
+
   ports: {
     staticServer: 8080,
     livereloadServer: 35729
   }
 };
+

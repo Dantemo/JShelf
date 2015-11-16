@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var config = require('../config');
 
 module.exports = gulp.task('browserify', function () {
   return browserify({

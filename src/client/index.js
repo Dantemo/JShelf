@@ -1,9 +1,6 @@
+/** Created by CUIJA on 2015-11-16.*/
 'use strict';
-
-//browserify-shim dependencies (can be edited in package.json)
 require('angular');
-
-  require('angular-ui-bootstrap');
-  require('angular-ui-router');
-//app entry point
-require('./app');
+require('angular-ui-bootstrap');
+require('angular-ui-router');
+require('./home');

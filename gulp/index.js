@@ -1,12 +1,10 @@
+/** Created by CUIJA on 2015-11-16.*/
 'use strict';
+var fs = require('fs');
+var argv = require('yargs').argv;
+var tasks = fs.readdirSync('./gulp/tasks/');
+var config = require('./config');
 
-var fs = require('fs'),
-  argv = require('yargs').argv,
-  tasks = fs.readdirSync('./gulp/tasks/');
-
-require('./config');
-
-// --release flag when executing a task
 global.release = argv.release;
 
 tasks.forEach(function (task) {
