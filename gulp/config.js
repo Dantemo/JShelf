@@ -20,7 +20,7 @@ module.exports = {
   },
   paths: {
     src: {
-      index: config.folder.src + '/client/home/index.html',
+      index: config.folder.src + '/client/index.html',
       assets: [
         config.folder.src + '/client/*/assets/**/*',
         '!' + config.folder.src + '/client/*/assets/images/*'

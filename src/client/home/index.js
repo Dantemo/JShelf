@@ -5,19 +5,17 @@
 var headerController = require('./controllers/header.controller');
 var homeController = require('./controllers/home.controller');
 var homeRoutes = require('./routes/home.routes');
-var templateCache = require('../../../dist/tmp/templates');
+var template = require('../../../dist/tmp/templates');
 
 module.exports = angular.module('home',[
   'ngAnimate',
   'ngResource',
   'ui.bootstrap',
   'ui.router',
-  homeRoutes.name,
-  headerController.name,
-  homeController.name,
-  templateCache.name
-])
-
-
+  'ui.bootstrap.tpls',
+  template.name
+]).config(homeRoutes)
+  .controller('HomeController',homeController)
+  .controller('HeaderController',headerController)
 
 ;
