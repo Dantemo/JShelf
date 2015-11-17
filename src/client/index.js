@@ -7,6 +7,5 @@ require('angular-resource');
 require('angular-animate');
 require('angular-ui-bootstrap');
 require('angular-ui-router');
-
 require('./home');
-console.log('Load All Modules End');
+

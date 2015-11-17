@@ -12,7 +12,6 @@ module.exports = angular.module('home',[
   'ngResource',
   'ui.bootstrap',
   'ui.router',
-  'ui.bootstrap.tpls',
   template.name
 ]).config(homeRoutes)
   .controller('HomeController',homeController)

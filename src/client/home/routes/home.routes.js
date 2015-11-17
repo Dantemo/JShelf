@@ -2,18 +2,15 @@
 'use strict';
 
 module.exports =
-  function homeRoutes($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise(function ($injector) {
-      $injector.get('$state').transitionTo('not-found', null, {
-        location: false
-      });
-    });
+  function homeRoutes($stateProvider) {
+
 
     // Home state routing
     $stateProvider
       .state('home', {
         url: '',
-        templateUrl: 'home/views/home.index.html'
-      });
+        templateUrl: 'home/views/home.register.html'
+      })
+    ;
   }
 ;

@@ -15,7 +15,8 @@ module.exports = gulp.task('styles', function () {
   return gulp.src(config.paths.src.styles)
     .pipe(concat('bundledCssFile'))
     .pipe(autoprefixer('last 1 version'))
-    .pipe(gulpif(release, minifyCss(),minifyCss()))
     .pipe(gulpif(release, rename(config.filenames.release.styles), rename(config.filenames.build.styles)))
     .pipe(gulpif(release, gulp.dest(config.paths.dest.release.styles), gulp.dest(config.paths.dest.build.styles)));
 });
+
+//.pipe(gulpif(release, minifyCss(),minifyCss()))
