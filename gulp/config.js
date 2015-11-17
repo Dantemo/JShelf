@@ -4,7 +4,8 @@ var config = {
     src: 'src',
     build: 'dist/build',
     release: 'dist/release',
-    tmp: 'dist/tmp'
+    tmp: 'dist/tmp',
+    assets: 'node_modules/bootstrap/dist/css'
   }
 };
 
@@ -14,7 +15,8 @@ module.exports = {
     src: config.folder.src,
     build: config.folder.build,
     release: config.folder.release,
-    tmp: config.folder.tmp
+    tmp: config.folder.tmp,
+    assets: config.folder.assets
   },
   paths: {
     src: {
@@ -26,8 +28,8 @@ module.exports = {
       images: config.folder.src + '/client/*/assets/images/*',
       scripts: config.folder.src + '/client/**/*.js',
       styles: [
-        'node_modules/bootstrap/dist/css/bootstrap.css',
-        'node_modules/bootstrap/dist/css/bootstrap-theme.css',
+        config.folder.assets + '/bootstrap.css',
+        config.folder.assets + '/bootstrap-theme.css',
         config.folder.src + '/client/*/styles/*.css'
       ],
       stylesGlob: config.folder.src + '/client/*/styles/*.css',
