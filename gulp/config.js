@@ -37,7 +37,7 @@ module.exports = {
       templatesHTML: config.folder.src + '/client/**/*.html',
       templatesCompiled: config.folder.tmp,
       livereload: [config.folder.build + '/**/*', '!' + config.folder.build + '/client/*/assets/**/*'],
-      modules: './'+config.folder.src + '/client/index.js'
+      modules:config.folder.src + '/client/index.js'
     },
     dest: {
       build: {
