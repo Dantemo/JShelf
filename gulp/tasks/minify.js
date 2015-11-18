@@ -8,6 +8,7 @@ var config = require('../config');
 module.exports = gulp.task('minify', function () {
   return gulp.src(config.paths.dest.release.scripts + '/' + config.filenames.release.scripts)
     .pipe(ngAnnotate())
-    .pipe(uglify())
+    .pipe(uglify({mangle: false}))
     .pipe(gulp.dest(config.paths.dest.release.scripts));
 });
+

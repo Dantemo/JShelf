@@ -9,7 +9,8 @@ module.exports = gulp.task('default', function () {
       'clean',
       ['index', 'styles', 'images', 'assets', 'templates', 'lint'],
       'browserify',
-      ['minify', 'serve']
+      ['minify'],
+      ['serve']
     );
   }
   else {
