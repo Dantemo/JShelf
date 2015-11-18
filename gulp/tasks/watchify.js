@@ -4,7 +4,6 @@ var gulp = require('gulp');
 var watchify = require('watchify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-var browserifyShim = require('browserify-shim');
 var config = require('../config');
 
 module.exports = gulp.task('watchify', function () {
@@ -15,7 +14,6 @@ module.exports = gulp.task('watchify', function () {
   });
   console.log("=====Load From Entry====");
 
-  bundler.transform(browserifyShim);
   bundler.on('update', rebundle);
   function rebundle() {
     console.log("Rebundle!");
