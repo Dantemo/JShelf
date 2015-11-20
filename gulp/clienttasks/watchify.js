@@ -12,11 +12,11 @@ module.exports = gulp.task('watchify', function () {
     cache:{},
     plugin:[watchify]
   });
-  console.log("=====Load From Entry====");
+
 
   bundler.on('update', rebundle);
   function rebundle() {
-    console.log("Rebundle!");
+    console.log("Update JS Bundle!");
     return bundler.bundle()
       .pipe(source(config.filenames.build.scripts))
       .pipe(gulp.dest(config.paths.dest.build.scripts));

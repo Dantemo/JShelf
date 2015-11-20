@@ -8,7 +8,9 @@ npm install
 ```
 
 ## Usage
-### Development
+
+### Front-End
+#### Development
 ```
 gulp
 ```
@@ -17,7 +19,20 @@ or
 gulp --build
 ```
 
-### Release
+#### Release
 ```
 gulp --release
 ```
+
+### Server-Side & Front End
+#### Development
+```
+node server.js
+```
+
+#### Release
+```
+node server.js --release
+```
+
+

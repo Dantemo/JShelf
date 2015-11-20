@@ -1,7 +1,6 @@
 /** Created by CUIJA on 2015-11-16.*/
 'use strict';
 var gulp = require('gulp');
-var http = require('http');
 var config = require('../config');
 var express = require('express');
 var path = require('path');
@@ -108,7 +107,7 @@ function getGlobalPaths(globPatterns, excludes) {
 }
 
 
-module.exports = gulp.task('serve', function (next) {
+module.exports = gulp.task('server', function (next) {
   var server = start();
 });
 

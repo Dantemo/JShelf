@@ -11,7 +11,6 @@ var config = require('../config');
 
 
 module.exports = gulp.task('styles', function () {
-  console.log('Building CSS bundle');
   return gulp.src(config.paths.src.styles)
     .pipe(concat('bundledCssFile'))
     .pipe(autoprefixer('last 1 version'))
