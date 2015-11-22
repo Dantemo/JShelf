@@ -1,4 +1,66 @@
 <div ng-controller="RegisterController">
-  <h1>This is register Page</h1>
-  <h1>{{reginfo}}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <form action="#" method="post" class="center-block form-center" >
+          <div class="form-group">
+            <label>UserName</label>
+            <input id="username" type="text" name="username"  class="form-control" required
+                   pattern="^[a-zA-z][a-zA-Z0-9_]{3,20}$"
+                   placeholder="用户:开头字母大小写,3-20位"
+            />
+            <i id="validateUserNameSpinner" class="fa fa-circle-o-notch fa-spin hidden" ></i>
+            <p id="validateUserNameMessage" class="hidden" ></p>
+          </div>
+          <div class="form-group">
+            <label>PassWord</label>
+            <input id="password" type="password" name="password" class="form-control" required
+                   pattern="^[a-zA-z0-9][a-zA-Z0-9_]{3,20}$"
+                   placeholder="密码:开头字母大小写,3-20位"
+            />
+            <p id="validatePassWordMessage" class="hidden" ></p>
+          </div>
+          <div class="form-group">
+            <label>Tel</label>
+            <input id="tel" type="tel" name="tel" class="form-control" required
+                   pattern="^[0-9\-]{7,20}$"
+                   placeholder="号码:长度7-20"
+            />
+            <p id="validateTelMessage" class="hidden" ></p>
+          </div>
+          <div class="form-group">
+            <label>ID Card</label>
+            <img id="idCardImage" class="hidden image-reg-preview" />
+            <input id="idCard" type="file" name="idCard" class="form-control" required
+                   pattern="^[0-9]{5}[0-9xX]{1}$"
+                   placeholder="身份证:请上传图片"
+            />
+            <p id="validateIdCardMessage" class="hidden" ></p>
+          </div>
+          <div class="form-group">
+            <label>License</label>
+            <img id="licenseImage" class="hidden image-reg-preview" />
+            <input id="license" type="file" name="license" class="form-control" required
+                   placeholder="许可证:请上传许可证照片"
+            />
+            <p id="validateLicenseMessage" class="hidden" ></p>
+          </div>
+          <br />
+          <input id="idCardId" type="hidden" />
+          <input id="licenseId" type="hidden" />
+          <span id="errorMessage" class="text-danger"></span>
+          <br />
+          <button id="registerButton" type="button" class="btn btn-block btn-success">Register</button>
+          <br />
+          <div class="text-left">
+            <i id="registerSpinner" class="fa fa-spinner fa-pulse hidden"></i>
+          </div>
+
+          <div class="text-right">
+            <a href="login" class="btn btn-link">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

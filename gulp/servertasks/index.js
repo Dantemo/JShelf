@@ -6,6 +6,7 @@ var runSequence = require('run-sequence');
 require('../clienttasks/index');
 require('../clienttasks/assets');
 require('../clienttasks/browserify');
+require('../clienttasks/fonts');
 require('../clienttasks/clean');
 require('../clienttasks/images');
 require('../clienttasks/minify');
@@ -21,7 +22,7 @@ function start(){
   if (release) {
     runSequence(
       'clean',
-      ['index', 'styles', 'images', 'assets', 'templates'],
+      ['index', 'styles', 'images', 'fonts', 'assets', 'templates'],
       'browserify',
       'minify',
       'server'
@@ -30,7 +31,7 @@ function start(){
   else {
     runSequence(
       'clean',
-      ['index', 'styles', 'images', 'assets', 'templates'],
+      ['index', 'styles', 'images', 'fonts', 'assets', 'templates'],
       ['watchify', 'watch'],
       'server'
     );

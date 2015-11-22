@@ -12,6 +12,10 @@ function homeRoutes($stateProvider) {
       url:'/register',
       templateUrl: 'auth/views/auth.register.html'
     })
+    .state('login',{
+      url:'/login',
+      templateUrl: 'auth/views/auth.login.html'
+    })
   ;
 }
 
