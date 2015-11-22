@@ -16,5 +16,4 @@ module.exports = angular.module('home',[
 ]).config(homeRoutes)
   .controller('HomeController',homeController)
   .controller('HeaderController',headerController)
-
 ;

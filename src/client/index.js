@@ -8,4 +8,4 @@ require('angular-animate');
 require('angular-ui-bootstrap');
 require('angular-ui-router');
 require('./home');
-
+require('./auth');

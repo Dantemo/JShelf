@@ -8,6 +8,10 @@ function homeRoutes($stateProvider) {
       url: '',
       templateUrl: 'home/views/home.index.html'
     })
+    .state('register',{
+      url:'/register',
+      templateUrl: 'auth/views/auth.register.html'
+    })
   ;
 }
 
