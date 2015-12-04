@@ -1,13 +1,12 @@
 'use strict';
-
+var Browserify = require('browserify');
 var gulp = require('gulp');
 var watchify = require('watchify');
-var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var config = require('../config');
 
 module.exports = gulp.task('watchify', function () {
-  var bundler = browserify({
+  var bundler = new Browserify({
     entries: [config.paths.src.modules],
     cache:{},
     plugin:[watchify]
