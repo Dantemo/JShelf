@@ -7,6 +7,7 @@ var homeController = require('./controllers/home.controller');
 var pictureSlideController = require('./controllers/picture.slide.controller');
 var homeRoutes = require('./routes/home.routes');
 var template = require('../../../dist/tmp/templates');
+var angular = require('angular');
 
 module.exports = angular.module('home',[
   'ngAnimate',

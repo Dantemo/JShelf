@@ -14,11 +14,12 @@ require('../clienttasks/styles');
 require('../clienttasks/templates');
 require('../clienttasks/watch');
 require('../clienttasks/watchify');
+require('../clienttasks/webpack');
 require('./server');
 
 global.release = argv.release;
 
-function start(){
+function start() {
   if (release) {
     runSequence(
       'clean',
@@ -32,7 +33,8 @@ function start(){
     runSequence(
       'clean',
       ['index', 'styles', 'images', 'fonts', 'assets', 'templates'],
-      ['watchify', 'watch'],
+      //['watchify', 'watch'],
+      ['webpack'],
       'server'
     );
   }
