@@ -15,6 +15,7 @@ require('../clienttasks/templates');
 require('../clienttasks/watch');
 require('../clienttasks/watchify');
 require('../clienttasks/webpack');
+require('../clienttasks/webpack-watch');
 require('./server');
 
 global.release = argv.release;
@@ -34,7 +35,7 @@ function start() {
       'clean',
       ['index', 'styles', 'images', 'fonts', 'assets', 'templates'],
       //['watchify', 'watch'],
-      ['webpack'],
+      ['webpack','webpack-watch'],
       'server'
     );
   }

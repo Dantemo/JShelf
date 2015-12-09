@@ -8,7 +8,7 @@ module.exports = gulp.task('default', function () {
     runSequence(
       'clean',
       ['index', 'styles', 'images', 'fonts', 'assets', 'templates'],
-      'browserify',
+      ['webpack'],
       'minify',
       'serve'
     );
