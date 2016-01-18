@@ -2,11 +2,11 @@
 
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
-var imagemin = require('gulp-imagemin');
+//var imagemin = require('gulp-imagemin');
 var config = require("../config");
 
 module.exports = gulp.task('images', function () {
   return gulp.src(config.paths.src.images)
-    .pipe(gulpif(release, imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+    //.pipe(gulpif(release, imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulpif(release, gulp.dest(config.paths.dest.release.images), gulp.dest(config.paths.dest.build.images)));
 });

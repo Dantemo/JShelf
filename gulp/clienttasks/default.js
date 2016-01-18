@@ -7,7 +7,7 @@ module.exports = gulp.task('default', function () {
   if (release) {
     runSequence(
       'clean',
-      ['index', 'styles', 'images', 'fonts', 'assets', 'templates'],
+      ['index', 'styles', 'fonts', 'assets', 'templates'],
       ['webpack'],
       'minify',
       'serve'
@@ -16,8 +16,8 @@ module.exports = gulp.task('default', function () {
   else {
     runSequence(
       'clean',
-      ['index', 'styles', 'images', 'fonts', 'assets', 'templates'],
-      ['watchify', 'watch'],
+      ['index', 'styles', 'fonts', 'assets', 'templates'],
+      ['watchify', 'livereload'],
       'serve'
     );
   }
